@@ -16,6 +16,18 @@ class TestLibraryManagementSystem:
     def test_add_book(self):
         assert self.book.isbn in self.library.books, f"AssertionError: {f'{self.book.isbn} not found in {self.library.books}'}"
 
+    """Testing check for borrow book() """
+    def test_borrow_book(self):
+        self.library.borrow_book(self.book.isbn)
+        assert not self.library.books[self.book.isbn].is_available, f"AssertionError: {'Expected False, but got True'}"
+
+    def test_borrow_unavailable_book(self):
+        try:
+            self.library.borrow_book(self.book.isbn)
+            raise AssertionError(f"AssertionError: Unavailable book borrowed")
+        except:
+            return True
+
 def run_tests():
     test_suite = TestLibraryManagementSystem()
     """ Fetching all methods for unit testing  """
