@@ -75,3 +75,65 @@ class Library:
             with open("library_data.json", "r") as f:
                 data = json.load(f)
                 self.books = {isbn: Book.from_dict(book_data) for isbn, book_data in data.items()}
+
+def main():
+    library = Library()
+
+    while True:
+        print("\nLibrary Management System")
+        print("1. Add Book")
+        print("2. Borrow Book")
+        print("3. Return Book")
+        print("4. View Available Books")
+        print("5. Exit")
+
+        choice = input("Enter your choice (1-5): ")
+
+        if choice == "1":
+            isbn = input("Enter ISBN: ")
+            title = input("Enter Title: ")
+            author = input("Enter Author: ")
+            year = input("Enter Publication Year: ")
+            try:
+                book = Book(isbn, title, author, int(year))
+                library.add_book(book)
+                print("Book added successfully.")
+            except ValueError as e:
+                print(f"Error: {e}")
+
+        elif choice == "2":
+            isbn = input("Enter ISBN of the book to borrow: ")
+            try:
+                library.borrow_book(isbn)
+                print("Book borrowed successfully.")
+            except ValueError as e:
+                print(f"Error: {e}")
+
+        elif choice == "3":
+            isbn = input("Enter ISBN of the book to return: ")
+            try:
+                library.return_book(isbn)
+                print("Book returned successfully.")
+            except ValueError as e:
+                print(f"Error: {e}")
+
+        elif choice == "4":
+            available_books = library.get_available_books()
+            if available_books:
+                print("Available Books:")
+                for book in available_books:
+                    print(f"ISBN: {book.isbn}, Title: {book.title}, Author: {book.author}")
+            else:
+                print("No books available.")
+
+        elif choice == "5":
+            print("Thank you for using the Library Management System. Goodbye!")
+            break
+
+        else:
+            print("Invalid choice. Please try again.")
+
+
+#isbn - unique id
+if __name__ == "__main__":
+    main()
