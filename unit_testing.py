@@ -16,6 +16,13 @@ class TestLibraryManagementSystem:
     def test_add_book(self):
         assert self.book.isbn in self.library.books, f"AssertionError: {f'{self.book.isbn} not found in {self.library.books}'}"
 
+    """Testing check for viewing books """
+    def test_get_available_books(self):
+        available_books = self.library.get_available_books()
+        assert len(available_books) == 1, f"AssertionError: {f'Expected 1, but got {len(available_books)}'}"
+
+        assert available_books[0].isbn == self.book.isbn, f"AssertionError: {f'Expected {self.book.isbn}, but got {available_books[0].isbn}'}"
+
     """Testing check for borrow book() """
     def test_borrow_book(self):
         self.library.borrow_book(self.book.isbn)

@@ -39,6 +39,7 @@ class Library:
         self.save_data()
 
     def borrow_book(self, isbn):
+        """Implementation of borrow_book operation"""
         if isbn not in self.books:
             raise ValueError("Book not found")
         if not self.books[isbn].is_available:
@@ -47,12 +48,16 @@ class Library:
         self.save_data()
 
     def return_book(self, isbn):
+        """Implementation of return_book operation"""
         if isbn not in self.books:
             raise ValueError("Book not found")
         if self.books[isbn].is_available == True:
             raise ValueError("Book already returned")
         self.books[isbn].is_available = True
         self.save_data()
+
+    def get_available_books(self):
+        return [book for book in self.books.values() if book.is_available]
 
     def clear_all_data(self):
         """Empties all the records in the JSON file and resets the books dictionary."""
