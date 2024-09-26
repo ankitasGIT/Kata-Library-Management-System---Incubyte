@@ -1,0 +1,213 @@
+Test Case Report for - Unit Testing
+
+test_add_book - PASS
+test_borrow_book - PASS
+test_borrow_unavailable_book - PASS
+test_get_available_books - PASS
+test_return_book - PASS
+
+
+Test Case Report for - Library Management
+
+
+Sample Test Cases : 
+
+Test Case 1 :
+
+Library Management System
+1. Add Book
+2. Borrow Book
+3. Return Book
+4. View Available Books
+5. Exit
+Enter your choice (1-5): 1
+Enter ISBN: 101
+Enter Title: 200 Years of German Humor
+Enter Author: John Chile
+Enter Publication Year: 2000
+Book added successfully.
+
+Library Management System
+1. Add Book
+2. Borrow Book
+3. Return Book
+4. View Available Books
+5. Exit
+Enter your choice (1-5): 1
+Enter ISBN: 102
+Enter Title: Exhanchange of Platitudes
+Enter Author: J.K Verma
+Enter Publication Year: 1998
+Book added successfully.
+
+Library Management System
+1. Add Book
+2. Borrow Book
+3. Return Book
+4. View Available Books
+5. Exit
+Enter your choice (1-5): 1
+Enter ISBN: 103
+Enter Title: 1977!
+Enter Author: Mr. J C Ling
+Enter Publication Year: 1999
+Book added successfully.
+
+Library Management System
+1. Add Book
+2. Borrow Book
+3. Return Book
+4. View Available Books
+5. Exit
+Enter your choice (1-5): 4
+Available Books:
+ISBN: 101, Title: 200 Years of German Humor, Author: John Chile, Publication Year: 2000
+ISBN: 102, Title: Exhanchange of Platitudes, Author: J.K Verma, Publication Year: 1998
+ISBN: 103, Title: 1977!, Author: Mr. J C Ling, Publication Year: 1999
+
+
+Test Case 2 :
+
+Library Management System
+1. Add Book
+2. Borrow Book
+3. Return Book
+4. View Available Books
+5. Exit
+Enter your choice (1-5): 2
+Enter ISBN of the book to borrow: 103
+Book borrowed successfully.
+
+Library Management System
+1. Add Book
+2. Borrow Book
+3. Return Book
+4. View Available Books
+5. Exit
+Enter your choice (1-5): 4
+Available Books:
+ISBN: 101, Title: 200 Years of German Humor, Author: John Chile, Publication Year: 2000
+ISBN: 102, Title: Exhanchange of Platitudes, Author: J.K Verma, Publication Year: 1998
+
+Library Management System
+1. Add Book
+2. Borrow Book
+3. Return Book
+4. View Available Books
+5. Exit
+Enter your choice (1-5): 1
+Enter ISBN: 103
+Enter Title: Ask your Admin
+Enter Author: Jane Lewis
+Enter Publication Year: 1980
+Error: Book with this ISBN already exists
+
+
+Test Case : 3
+
+Library Management System
+1. Add Book
+2. Borrow Book
+3. Return Book
+4. View Available Books
+5. Exit
+Enter your choice (1-5): 1
+Enter ISBN: 104
+Enter Title: Atomic Habits
+Enter Author: James Clear
+Enter Publication Year: 2018
+Book added successfully.
+
+Library Management System
+1. Add Book
+2. Borrow Book
+3. Return Book
+4. View Available Books
+5. Exit
+Enter your choice (1-5): 3
+Enter ISBN of the book to return: 103
+Book returned successfully.
+
+Library Management System
+1. Add Book
+2. Borrow Book
+3. Return Book
+4. View Available Books
+5. Exit
+Enter your choice (1-5): 4
+Available Books:
+ISBN: 101, Title: 200 Years of German Humor, Author: John Chile, Publication Year: 2000
+ISBN: 102, Title: Exhanchange of Platitudes, Author: J.K Verma, Publication Year: 1998 
+ISBN: 103, Title: 1977!, Author: Mr. J C Ling, Publication Year: 1999
+ISBN: 104, Title: Atomic Habits, Author: James Clear, Publication Year: 2018
+
+Test Case : 4
+
+Library Management System
+1. Add Book
+2. Borrow Book
+3. Return Book
+4. View Available Books
+5. Exit
+Enter your choice (1-5): 4
+Available Books:
+ISBN: 101, Title: 200 Years of German Humor, Author: John Chile, Publication Year: 2000
+ISBN: 102, Title: Exhanchange of Platitudes, Author: J.K Verma, Publication Year: 1998
+ISBN: 103, Title: 1977!, Author: Mr. J C Ling, Publication Year: 1999
+ISBN: 104, Title: Atomic Habits, Author: James Clear, Publication Year: 2018
+
+Library Management System
+1. Add Book
+2. Borrow Book
+3. Return Book
+4. View Available Books
+5. Exit
+Enter your choice (1-5): 2
+Enter ISBN of the book to borrow: 105
+Error: Book not found
+
+
+Test Case : 5
+
+Library Management System
+1. Add Book
+2. Borrow Book
+3. Return Book
+4. View Available Books
+5. Exit
+Enter your choice (1-5): 4
+Available Books:
+ISBN: 101, Title: 200 Years of German Humor, Author: John Chile, Publication Year: 2000
+ISBN: 102, Title: Exhanchange of Platitudes, Author: J.K Verma, Publication Year: 1998
+ISBN: 103, Title: 1977!, Author: Mr. J C Ling, Publication Year: 1999
+ISBN: 104, Title: Atomic Habits, Author: James Clear, Publication Year: 2018
+
+Library Management System
+1. Add Book
+2. Borrow Book
+3. Return Book
+4. View Available Books
+5. Exit
+Enter your choice (1-5): 3
+Enter ISBN of the book to return: 103
+Error: Book already returned
+
+Library Management System
+1. Add Book
+2. Borrow Book
+3. Return Book
+4. View Available Books
+5. Exit
+Enter your choice (1-5): 3
+Enter ISBN of the book to return: 107
+Error: Book not found
+
+Library Management System
+1. Add Book
+2. Borrow Book
+3. Return Book
+4. View Available Books
+5. Exit
+Enter your choice (1-5): 5
+Thank you for using the Library Management System. Goodbye!
+
