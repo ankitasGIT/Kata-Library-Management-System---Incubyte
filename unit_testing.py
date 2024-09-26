@@ -27,6 +27,12 @@ class TestLibraryManagementSystem:
             raise AssertionError(f"AssertionError: Unavailable book borrowed")
         except:
             return True
+    
+    """Testing check for return book()"""
+    def test_return_book(self):
+        self.library.borrow_book(self.book.isbn)
+        self.library.return_book(self.book.isbn)
+        assert self.library.books[self.book.isbn].is_available, f"AssertionError: {'Expected True, but got False'}"
 
 def run_tests():
     test_suite = TestLibraryManagementSystem()
