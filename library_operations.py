@@ -122,7 +122,7 @@ def main():
             if available_books:
                 print("Available Books:")
                 for book in available_books:
-                    print(f"ISBN: {book.isbn}, Title: {book.title}, Author: {book.author}")
+                    print(f"ISBN: {book.isbn}, Title: {book.title}, Author: {book.author}, Publication Year: {book.publication_year}")
             else:
                 print("No books available.")
 
